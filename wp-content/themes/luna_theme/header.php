@@ -4,33 +4,38 @@
 
 <head>
 
-<title>Luna</title>
+
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <link rel="profile" href="https://gmpg.org/xfn/11">
 
   <?php wp_head(); ?>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
 
 </head>
 
 <body <?php body_class(); ?>>
+   
+    <div id="page" class="site">
 
   <?php wp_body_open(); ?>
-
   
   <header class="header">
     <div class="header-inner">
         <div class="topnav">
-            <a href ="">Home</a>
+        <a> <?php wp_nav_menu(
+                        array(
+                            'theme_location' => 'primary',
+                        )
+                    ); ?>
+        </a>
+           <!-- <a href ="">Home</a>
             <a href ="">Pages</a>
             <a href ="">Life Style</a>
             <a href ="">Fashion</a>
             <a href ="">About me</a>
             <a href ="">Contact me</a>
-            <a href ="">Features</a>
+            <a href ="">Features</a> -->
             <div class="search-container">
                 <form action="/search.php">
                   <input type="text" placeholder="Search" name="search">

@@ -1,0 +1,1 @@
+<h1 class = "heading"> <?php the_title(); ?> Light up your corner</h1>
